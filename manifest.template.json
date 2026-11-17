@@ -1,6 +1,6 @@
 {
   "name": "Initiative & Actions Tracker",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "manifest_version": 1,
   "author": "stastriada",
   "description": "Initiative tracker with action, bonus action and reaction, skills, resources, 5e conditions, HP and AC. Russian UI.",
