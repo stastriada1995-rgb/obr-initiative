@@ -226,8 +226,8 @@ span.chip { display: inline-block; cursor: default; }
 .skill-groups { display: flex; flex-direction: column; gap: 10px; }
 .group-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
 .skill-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-.skill { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--tc); border-radius: 8px; padding: 6px 8px; }
-.skill.editing { border-color: var(--accent); border-left-color: var(--tc); }
+.skill-list .skill { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--tc); border-radius: 8px; padding: 6px 8px; }
+.skill-list .skill.editing { border-color: var(--accent); border-left-color: var(--tc); }
 .skill-head { display: flex; align-items: center; gap: 6px; }
 .skill-head b { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .skill-head .meta { color: var(--muted); font-size: 11px; text-align: right; }
