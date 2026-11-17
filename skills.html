@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Навыки персонажа</title>
+  </head>
+  <body class="skills-page">
+    <header class="head editor-head">
+      <div class="title">Персонаж: <span id="char-name"></span></div>
+      <div class="bar-actions">
+        <button id="io-import" type="button" class="small">⇩ Импорт</button>
+        <button id="io-export" type="button" class="small">⇧ Экспорт</button>
+        <button id="reset-all" type="button" class="small" title="Восстановить все навыки и ресурсы этого персонажа">↺ Восстановить всё</button>
+        <button id="close" type="button" class="ghost icon" title="Закрыть">✕</button>
+      </div>
+    </header>
+
+    <section id="io-panel" class="io-panel" hidden>
+      <textarea id="io-text" rows="6" placeholder="Вставьте сюда JSON"></textarea>
+      <div id="io-status" class="io-status"></div>
+      <div class="form-row end" id="io-import-actions">
+        <button type="button" id="io-close" class="ghost">Закрыть</button>
+        <button type="button" id="io-replace">Заменить всё</button>
+        <button type="button" id="io-merge" class="primary">Добавить</button>
+      </div>
+    </section>
+
+    <main class="editor">
+      <!-- ================= левая колонка ================= -->
+      <div class="col">
+        <section class="section">
+          <div class="section-title">Характеристики</div>
+          <div class="stat-grid">
+            <label>КД <input id="s-ac" type="number" placeholder="—" /></label>
+            <label>Хиты <input id="s-hp" type="number" placeholder="—" /></label>
+            <label>Макс. хиты <input id="s-hpMax" type="number" min="1" placeholder="—" /></label>
+            <label>Врем. хиты <input id="s-hpTemp" type="number" min="0" placeholder="0" /></label>
+            <label>Бонус инициативы <input id="s-initBonus" type="number" placeholder="+0" /></label>
+          </div>
+          <label class="check"><input id="s-showBar" type="checkbox" /> Показывать полоску хитов и КД игрокам</label>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Защиты</div>
+          <div class="def-grid" id="defenses"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Ресурсы</div>
+          <ul id="resources" class="res-list"></ul>
+          <p id="res-empty" class="hint">Ки, ячейки заклинаний, ярость, стрелы…</p>
+          <form id="res-form" class="mini-form">
+            <input id="r-name" placeholder="Название ресурса" required maxlength="40" />
+            <label class="tiny">Макс <input id="r-max" type="number" min="1" max="999" value="3" /></label>
+            <select id="r-recharge" title="Восстановление"></select>
+            <label class="check"><input id="r-show" type="checkbox" /> в трекере</label>
+            <div class="form-row end">
+              <button type="button" id="r-cancel" class="ghost" hidden>Отмена</button>
+              <button type="submit" id="r-submit">Добавить ресурс</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- ================= правая колонка ================= -->
+      <div class="col">
+        <section class="section">
+          <div class="section-title" id="form-title">Новый навык</div>
+          <form id="form" class="skill-form">
+            <input id="f-name" placeholder="Название (напр. Шквал ударов)" required maxlength="60" />
+            <textarea id="f-desc" placeholder="Описание" rows="3"></textarea>
+            <div class="type-picker" id="f-type"></div>
+            <label class="check spell-check"><input id="f-spell" type="checkbox" /> ✦ Заклинание</label>
+            <div class="form-row">
+              <label>Тратит ресурс <select id="f-cost"></select></label>
+              <label class="tiny">Кол-во <input id="f-amount" type="number" min="1" max="99" value="1" /></label>
+            </div>
+            <div class="form-row">
+              <label class="tiny">Заряды <input id="f-max" type="number" min="1" max="20" placeholder="∞" /></label>
+              <label>Восстановление зарядов <select id="f-recharge"></select></label>
+            </div>
+            <div class="form-row" id="roll-row" hidden>
+              <label>Кубик <select id="f-die"></select></label>
+              <label>Перезаряжается на <input id="f-rollMin" type="number" min="1" max="20" value="5" /></label>
+              <span class="hint roll-hint" id="roll-hint"></span>
+            </div>
+            <div class="form-row end">
+              <button type="button" id="f-cancel" class="ghost" hidden>Отмена</button>
+              <button type="submit" id="f-submit" class="primary">Добавить</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Навыки</div>
+          <div id="skills" class="skill-groups"></div>
+          <p id="empty" class="hint">Навыков пока нет.</p>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/src/skills.js"></script>
+  </body>
+</html>

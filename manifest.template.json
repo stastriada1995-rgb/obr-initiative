@@ -1,0 +1,16 @@
+{
+  "name": "Трекер инициативы",
+  "version": "2.0.0",
+  "manifest_version": 1,
+  "author": "stastriada",
+  "description": "Инициатива, действия, навыки, ресурсы, состояния, хиты и КД для D&D 5e.",
+  "icon": "%BASE%icon.svg",
+  "background_url": "%BASE%background.html",
+  "action": {
+    "title": "Инициатива",
+    "icon": "%BASE%icon.svg",
+    "popover": "%BASE%index.html",
+    "width": 420,
+    "height": 640
+  }
+}

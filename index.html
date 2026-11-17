@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Трекер инициативы</title>
+  </head>
+  <body>
+    <header class="head">
+      <div class="round">Раунд <span id="round">1</span></div>
+      <div class="controls gm-only">
+        <button id="prev-turn" title="Ход назад с откатом всего, что было нажато после него">◂ Назад</button>
+        <button id="next-turn" class="primary-soft">Следующий ход ▸</button>
+        <button id="next-round" title="Новый раунд">Раунд ↻</button>
+      </div>
+    </header>
+
+    <main id="app">
+      <ul id="list" class="list"></ul>
+
+      <p id="empty" class="empty">
+        Нет участников.<br />
+        <span class="gm-text">Правый клик по токену персонажа → <b>«Добавить в инициативу»</b>.</span>
+      </p>
+
+      <footer class="footer gm-only">
+        <button id="roll-all" class="ghost">🎲 Бросить инициативу</button>
+        <button id="short-rest" class="ghost">Короткий отдых</button>
+        <button id="long-rest" class="ghost">Длинный отдых</button>
+        <button id="reset" class="ghost">Сбросить бой</button>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
