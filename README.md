@@ -1,34 +1,34 @@
-# Initiative & Actions Tracker — трекер инициативы для Owlbear Rodeo
+# Initiative & Actions Tracker — an initiative tracker for Owlbear Rodeo.
 
-Боевой трекер для D&D 5e: порядок ходов, действие / бонусное действие / реакция,
-навыки и заклинания, ресурсы, состояния, хиты и КД — всё в одном окне.
-Мастер видит и управляет всем, игроки видят только порядок ходов.
+A combat tracker for D&D 5e: turn order, actions/bonus actions/reactions,
+skills and spells, resources, conditions, hit points, and AC — all in one window.
+The DM can view and manage everything, while players see only the turn order.
 
-**Адрес для установки в Owlbear Rodeo:**
+**URL for installation in Owlbear Rodeo:**
 
 ```
 https://stastriada1995-rgb.github.io/obr-initiative/manifest.json
 ```
 
-Owlbear Rodeo → профиль → **Extensions** → **Add Custom Extension** → вставить адрес → включить расширение в комнате.
+Owlbear Rodeo → profile → **Extensions** → **Add Custom Extension** → paste the URL → enable the extension in the room.
 
 <p align="center">
   <img src="public/screenshots/tracker-gm.png" width="380" alt="Трекер: вид мастера">
 </p>
 
-## Возможности
+## Features
 
-### Трекер
-- **Инициатива.** Поле для числа и кнопка «к20» под ним: бросок к20 + бонус инициативы персонажа. Кнопка «Бросить инициативу» внизу бросает за всех, у кого её ещё нет.
-- **Д / Б / Р.** Действие, бонусное действие и реакция у каждого участника. Восстанавливаются в начале раунда. Действие и бонусное нажимаются только в свой ход (мастер может обойти через Shift+клик).
-- **Шторка навыков.** У того, чей ход, навыки раскрыты, у остальных свёрнуты. Любую шторку можно открыть стрелкой.
-- **Порядок в шторке:** защиты → ресурсы → пассивки → реакции → свободные действия → действия и заклинания → бонусные действия.
-- **Клик по навыку** сразу тратит всё, что он стоит: кружок Д/Б/Р, ресурс и заряд. Правый клик отменяет. Свободные действия без зарядов отмечаются до конца раунда.
-- **Подсказка** при наведении: название, тип и стоимость, описание.
-- **Хиты и КД.** Клик по полоске хитов открывает панель «Урон / Лечение / Врем. хиты». Урон сначала снимает временные хиты.
-- **Состояния D&D 5e** кнопкой «+», с длительностью в раундах и уровнями истощения.
-- **Кнопки «Назад», «Следующий ход», «Раунд»** закреплены вверху. «Назад» откатывает ход вместе со всеми нажатиями.
-- **Отдых.** «Короткий отдых» и «Длинный отдых» восстанавливают навыки и ресурсы с соответствующей перезарядкой.
+### Tracker
+- **Initiative.** A numeric field with a "d20" button below it: rolls a d20 + the character's initiative bonus. The "Roll Initiative" button at the bottom rolls for everyone who hasn't rolled yet.
+- **A / BA / R.** Action, Bonus Action, and Reaction for each participant. These reset at the start of each round. Action and Bonus Action buttons can only be clicked during a character's own turn (the GM can bypass this by using Shift+click).
+- **Skill Panels.** The skills for the character whose turn it is are expanded, while others remain collapsed. Any panel can be expanded manually using the arrow icon.
+- **Panel Order:** Defenses → Resources → Passive traits → Reactions → Free actions → Actions and spells → Bonus actions.
+- **Clicking a skill** immediately consumes its costs—marking off an Action/Bonus Action/Reaction, a resource, or a charge. Right-clicking reverses this. Free actions without charges are marked as used for the remainder of the round.
+- **Hover tooltips:** display the name, type, cost, and description.
+- **Hit Points (HP) and Cooldowns:** Clicking the HP bar opens a panel for "Damage / Healing / Temporary HP." Damage is applied to temporary HP first.
+- **D&D 5e Conditions:** Can be added via the "+" button, with options for duration (in rounds) and levels of exhaustion.
+- **Navigation controls:** "Back," "Next Turn," and "Round" buttons are pinned at the top. The "Back" button reverts the turn, undoing all actions taken during it.
+- **Resting:** "Short Rest" and "Long Rest" options restore abilities and resources that have corresponding cooldowns or recharge mechanics.
 
 <p align="center">
   <img src="public/screenshots/tracker-hp.png" width="380" alt="Панель хитов">
@@ -36,22 +36,22 @@ Owlbear Rodeo → профиль → **Extensions** → **Add Custom Extension**
   <img src="public/screenshots/tooltip.png" width="380" alt="Подсказка навыка">
 </p>
 
-### Вид игрока
-Игроки видят только номер раунда, порядок ходов, имена с иконками и состояния. Скрытые токены, навыки, хиты и кнопки управления им не показываются. Пункты меню на токене доступны только мастеру.
+### Player View
+Players see only the round number, the turn order, names (along with icons), and statuses. Hidden tokens, skills, hit points, and control buttons are not displayed to them. Menu options on a token are accessible only to the Game Master.
 
 <p align="center">
   <img src="public/screenshots/tracker-player.png" width="380" alt="Вид игрока">
 </p>
 
-### Окно персонажа
-Правый клик по токену → **«Навыки персонажа»**.
+### Character Window
+Right-click on a token → **"Character Abilities"**.
 
-- **Характеристики:** КД, хиты, макс. хиты, временные хиты, бонус инициативы, галочка «Показывать полоску хитов и КД игрокам».
-- **Защиты:** уязвимость к урону, сопротивление урону и состояниям, иммунитет к урону и состояниям.
-- **Ресурсы:** Ки, ячейки, стрелы и т.п. — максимум, восстановление, показ в трекере.
-- **Навыки:** тип (действие, бонусное, реакция, свободное действие, пассивка), галочка «✦ Заклинание» со своим оттенком цвета, трата ресурса, заряды.
-- **Перезарядка:** каждый раунд, через раунд, бросок кубика (например, к6: 5–6 — бросается сам в начале хода существа), короткий отдых, длинный отдых, вручную.
-- **Импорт / экспорт** навыков в JSON и кнопка «Восстановить всё» для одного персонажа.
+- **Stats:** AC, Hit Points, Max HP, Temporary HP, Initiative Bonus, and a checkbox to "Show HP and AC bars to players."
+- **Defenses:** Damage vulnerabilities, resistances (to damage or conditions), and immunities (to damage or conditions).
+- **Resources:** Ki points, spell slots, arrows, etc. — includes settings for maximum values, recovery, and visibility in the tracker.
+- **Abilities:** Type (Action, Bonus Action, Reaction, Free Action, or Passive); a "✦ Spell" checkbox (with a distinct color tint); resource consumption; and charges.
+- **Recharge:** Options include every round, every other round, die roll (e.g., 1d6: 5–6 — automatically rolled at the start of the creature's turn), short rest, long rest, or manual reset.
+- **Import/Export:** Ability data can be imported or exported via JSON; a "Restore All" button is also available for individual characters.
 
 <p align="center">
   <img src="public/screenshots/editor.png" width="720" alt="Окно персонажа">
@@ -60,58 +60,16 @@ Owlbear Rodeo → профиль → **Extensions** → **Add Custom Extension**
   <img src="public/screenshots/editor-skills.png" width="720" alt="Навыки по группам">
 </p>
 
-### Полоска на токене
-Над токеном рисуется полоска хитов (зелёная → жёлтая → красная, временные хиты голубым) и кружок с КД. Мастер видит полоски у всех, игроки — только там, где включена галочка в окне персонажа.
+### Token Bar
+Above each token, a health bar is displayed (transitioning from green → yellow → red, with temporary hit points shown in blue), along with a small circle indicating cooldowns. The Game Master can see these bars for all tokens, while players can only see them for tokens where the corresponding option has been enabled in the character window.
 
-## Цвета навыков
+## Skill Colors
 
-| Тип | Цвет | Заклинание |
+| Type | Color | Spell |
 | --- | --- | --- |
-| Действие | зелёный | бирюзовый |
-| Бонусное действие | оранжевый | оранжево-красный |
-| Реакция | синий | сине-фиолетовый |
-| Свободное действие | розовый | фиолетовый |
-| Пассивка | серый, пунктир | — |
-| Ресурс | бирюзовый с ◆ | — |
-
-## Публикация и обновление
-
-Сайт собирается и публикуется GitHub Actions при каждом изменении в ветке `main`
-(файл `.github/workflows/deploy.yml`). В настройках репозитория должно стоять
-**Settings → Pages → Source: GitHub Actions**.
-
-Обновить расширение: загрузить изменённые файлы в репозиторий (**Add file → Upload files**), дождаться зелёной галочки во вкладке **Actions**, перезагрузить комнату в Owlbear.
-
-`manifest.template.json` — заготовка манифеста. Настоящий `manifest.json` с правильными путями создаётся при сборке.
-
-## Магазин расширений Owlbear Rodeo
-
-Страница для магазина лежит в `public/store.md` и публикуется по адресу
-`https://stastriada1995-rgb.github.io/obr-initiative/store.md`.
-Чтобы попасть в магазин, нужно сделать форк репозитория
-[owlbear-rodeo/extensions](https://github.com/owlbear-rodeo/extensions), добавить в конец `extensions.json` строку
-
-```json
-"initiative-actions-tracker": "https://stastriada1995-rgb.github.io/obr-initiative/store.md"
-```
-
-и отправить pull request в ветку `main` одним коммитом.
-
-## Разработка
-
-```
-npm install
-npm run dev
-```
-
-Адрес для Owlbear при локальной разработке: `http://localhost:5173/obr-initiative/manifest.json`.
-
-| Файл | Что внутри |
-| --- | --- |
-| `src/main.js` | трекер |
-| `src/skills.js` | окно персонажа |
-| `src/background.js` | меню на токенах |
-| `src/bars.js` | полоска хитов и КД на карте |
-| `src/logic.js` | применение навыков, перезарядка, хиты |
-| `src/constants.js` | типы навыков, состояния, перезарядка |
-| `public/store.md` | страница для магазина Owlbear Rodeo |
+| Action | Green | Turquoise |
+| Bonus Action | Orange | Orange-red |
+| Reaction | Blue | Blue-violet |
+| Free Action | Pink | Violet |
+| Passive | Gray, dashed | — |
+| Resource | Turquoise with ◆ | — |
